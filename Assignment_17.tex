@@ -1,0 +1,200 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment-17}
+\author{Ankur Aditya - EE20RESCH11010}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document contains the problem related to Eigenvalue and Eigenvectors (UGC-June-2017 Maths Q-78) 
+\end{abstract}
+Download the latex-file from 
+\begin{lstlisting}
+https://github.com/ankuraditya13/EE5609-Assignment17
+\end{lstlisting}
+
+\section{Problem}
+Let T be the linear operator on $\vec{R}^3$ which is represented in the standard ordered basis by the matrix
+\begin{align}
+\myvec{-9&4&4\\-8&3&4\\-16&8&7}
+\label{Q}
+\end{align}
+Prove that T is diagonalizable by exhibiting a basis for $\vec{R}^3$, each vector of which is a characteristic vector of T. 
+\section{Theorem}
+\subsection{\textbf{Theorem 1}}
+Let $\vec{T}$ be a linear operator on a finite-dimensional space $\vec{V}$. Let $c_1, \cdots, c_k$ be the distinct characteristic values of $\vec{T}$ and let $\vec{W}_i$ be the null space of $\vec{T}-c_i\vec{I}$. The following are equivalent.
+\begin{enumerate}
+\item[(i)] $\vec{T}$ is diagonalizable.
+\item[(ii)] The characteristic polynomial for $\vec{T}$ is,
+\begin{align}
+f = (x-c_1)^d_1 \cdots (x - c_k)^{d_k}
+\end{align}
+and $\dim W_i = d_i, i=1,\cdots ,k$
+\item[(iii)] $\dim W_1+\cdots+\dim W_k = \dim V$ 
+\end{enumerate}  
+\section{Solution}
+Now let,
+\begin{align}
+\vec{A} = \myvec{-9&4&4\\-8&3&4\\-16&8&7}
+\label{A}
+\end{align} 
+Solving $\mydet{\lambda \vec{I} - \vec{A}} = 0$
+\begin{align}
+\mydet{\lambda \vec{I} - \vec{A}} = \mydet{\lambda + 9&-4&-4\\8&\lambda - 3&-4\\16&-8&\lambda - 7}\\
+\xleftrightarrow[]{C_2\leftarrow C_2-C_3} \mydet{\lambda + 9&0&-4\\8&\lambda + 1&-4\\16&-\lambda - 1&\lambda - 7}
+\end{align}
+\begin{align}
+\therefore \mydet{\lambda \vec{I} - \vec{A}} = (\lambda + 1)\mydet{\lambda + 9&0&-4\\8&1&-4\\16&-1&\lambda - 7}\\
+\xleftrightarrow[]{R_3\leftarrow R_3+R_2} (\lambda + 1)\mydet{\lambda + 9&0&-4\\8&1&-4\\24&0&\lambda - 11}\\
+\implies (\lambda + 1)\mydet{\lambda + 9 & -4\\24& \lambda - 11}\\
+\implies \mydet{\lambda \vec{I} - \vec{A}} = (\lambda + 1)^{2}(\lambda - 3) = 0\\
+\implies \lambda_1 = -1, \lambda_2 = -1, \lambda_3 =3
+\label{lambda}
+\end{align} 
+Now at $\lambda_1$ and $\lambda_3$,
+\begin{align}
+\vec{A} + \vec{I} = \myvec{-8&4&4\\-8&4&4\\-16&8&8}\\
+\vec{A} - 3\vec{I} = \myvec{-12&4&4\\-8&0&4\\-16&8&4}
+\end{align}
+Now we know that $\vec{A}-3\vec{I}$ is singular and rank($\vec{A}-3\vec{I})\geq 2.$ Therefore, rank($\vec{A}-3\vec{I}$) = 2. Hence from the theorem-1 (iii) it is evident that rank($\vec{A}+\vec{I}) = 1$. Let $X_1$ and $X_3$ be the spaces of characteristic vectors associated with the characteristic values 1 and 3 respectively. We know from rank nullity theorem that $\dim X_1 = 2$ and $\dim X_3 = 1$. Hence by Theorem-2 (i) $\vec{T}$ is diagonalizable. \\
+The null-space of $\vec{T+I}$ is spanned by the vectors,
+\begin{align}
+\alpha_1 = \myvec{1&0&2}\\
+\alpha_2 = \myvec{1&2&0}
+\end{align}
+As both $\alpha_1$ and $\alpha_2$ are independent, hence they form basis for $X_1$. The null-space of $\vec{T-3I}$ is spanned by the vector,
+\begin{align}
+\alpha_3 = \myvec{1&1&2}
+\end{align}
+Here $\alpha_3$ is a characteristic vector and a basis for $\vec{X_3}$.
+Also the matrix P which enables us to change coordinates from the basis $\beta$ to the standard basis is the matrix which has transposes of $\alpha_1, \alpha_2 $ and $\alpha_3$ as it's column vectors:
+\begin{align}
+\vec{P} = \myvec{1&1&1\\0&2&1\\2&0&2}
+\end{align} 
+\end{document}
